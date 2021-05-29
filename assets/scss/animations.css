@@ -1,0 +1,74 @@
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes sliceToLeft {
+  from {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sliceToLeft {
+  from {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sliceToRight {
+  from {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sliceToRight {
+  from {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=animations.css.map */

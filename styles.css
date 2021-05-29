@@ -1,0 +1,248 @@
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes sliceToLeft {
+  from {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sliceToLeft {
+  from {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sliceToRight {
+  from {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sliceToRight {
+  from {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1.55rem;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+
+* {
+  outline: none !important;
+}
+
+.tutorial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85vw;
+  margin-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tutorial > * {
+  padding: 10px;
+}
+
+@media (min-width: 640px) {
+  .tutorial > * {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tutorial > * {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tutorial > * {
+    width: 65vw;
+  }
+}
+
+.tutorial-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid gray;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .tutorial-top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.tutorial-top > * {
+  padding: 10px;
+}
+
+.tutorial-top .step-cover {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  margin-bottom: 2rem;
+}
+
+.tutorial-top .step-cover > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .tutorial-top .step-cover {
+    margin: 0 15px 0 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.tutorial-top .heading {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tutorial-top .heading .content {
+  animation: sliceToLeft 1s ease-in-out 0.25s forwards;
+  opacity: 0;
+  -webkit-animation: sliceToLeft 1s ease-in-out 0.25s forwards;
+  margin-bottom: 10px;
+}
+
+.tutorial-top .heading .content .title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.tutorial-top .heading .content .intro {
+  overflow: auto;
+  height: 10rem;
+}
+
+.tutorial-top .heading .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.tutorial-top .heading .navbar > button {
+  border-radius: 3px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.tutorial-bottom {
+  padding-top: 2rem;
+  opacity: 0;
+  animation: sliceToRight 1s ease-in-out 1.25s forwards;
+  -webkit-animation: sliceToRight 1s ease-in-out 1.25s forwards;
+}
+
+.tutorial-bottom :first-child {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
