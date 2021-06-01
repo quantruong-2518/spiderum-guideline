@@ -1,0 +1,130 @@
+@import "assets/scss/animations.scss";
+@import "assets/scss/mixins.scss";
+
+$padding: 10px;
+$border-radius: 3px;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  line-height: 1.55rem;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+
+* {
+  outline: none !important;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  margin-top: 2rem;
+  align-items: center;
+
+  > * {
+    padding: $padding;
+
+    @include breakpoint(sm) {
+      width: 90vw;
+    }
+
+    @include breakpoint(lg) {
+      width: 80vw;
+    }
+
+    @include breakpoint(xl) {
+      width: 65vw;
+    }
+  }
+
+  &-top {
+    display: flex;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid gray;
+    flex-direction: column;
+
+    
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
+
+    > * {
+      padding: $padding;
+    }
+
+    .step-cover {
+      flex: 1;
+      border-radius: $border-radius;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+      margin-bottom: 2rem;
+
+      > img {
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      
+      @include breakpoint(lg) {
+      margin: 0 15px 0 0;
+      flex-direction: row;
+    }
+    }
+
+    .heading {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .content {
+        animation: sliceToLeft 1s ease-in-out 0.25s forwards;
+        opacity: 0;
+        -webkit-animation: sliceToLeft 1s ease-in-out 0.25s forwards;
+        margin-bottom: 10px;
+
+        .title {
+          margin-bottom: 1rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+
+        .intro {
+          overflow: auto;
+          height: 10rem;
+        }
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        > button {
+          border-radius: $border-radius;
+          padding: 5px 10px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    padding-top: 2rem;
+    opacity: 0;
+    animation: sliceToRight 1s ease-in-out 1.25s forwards;
+    -webkit-animation: sliceToRight 1s ease-in-out 1.25s forwards;
+
+    :first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
